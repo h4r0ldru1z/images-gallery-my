@@ -3,6 +3,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Header from './components/Header';
 import Search from './components/Search';
 
+const UNSPLASH_KEY=process.env.REACT_APP_UNSLPASH_KEY;
+
 /*will have everythng to fetch, and search*/
 const App=()=> {
   const [word, setWord]=useState('');
@@ -12,8 +14,17 @@ const App=()=> {
     /*console.log(e.target[0].value);así no podemos sincronizar el tema, debemos usar una forma que sea un conmponente controlado para poder hacer el seguimiento en react*/
     /*vamos a almacenar en el state todo lo que el usuario ingrese, haciendo el formulario un componente controlado, y tomamos del valor del state y no del formulario*/
     console.log(word); /*Va después de la función App, porque antes no teníamos la variable word*/
+    fetch(`https://api.unsplash.com/photos/random/?query=${word}&client_id=${UNSPLASH_KEY}`)
+      .then((res)=>res.json())
+      .then((data) =>{
+        console.log(data);
+      })
+      .catch((err)=>{
+        console.log(err);
+      })
   }
 
+  
 
   return (
     <div className="App">
