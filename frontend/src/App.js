@@ -3,9 +3,9 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Header from './components/Header';
 import Search from './components/Search';
 import ImageCard from './components/ImageCard';
-import {Container, Row, Col} from 'react-bootstrap';
 import Welcome from './components/Welcome';
 import React from 'react';
+import {Container, Row, Col} from 'react-bootstrap';
 
 const UNSPLASH_KEY = process.env.REACT_APP_UNSLPASH_KEY;
 
@@ -17,12 +17,7 @@ const App = () => {
   const handleSearchSubmit = (e) => {
     e.preventDefault();
     /* previene que se cargue la página*/
-    /* console.log(e.target[0].value);así no podemos sincronizar el tema,
-    debemos usar una forma que sea un conmponente
-    controlado para poder hacer el seguimiento
-    en react*/
-    /* vamos a almacenar en el state todo lo que el usuario ingrese,
-    haciendo el formulario un componente controlado,
+    /* vamos a almacenar en el state todo lo que el usuario ingrese, nnpmhaciendo el formulario un componente controlado,
     y tomamos del valor del state y no del formulario*/
     /* Va después de la función App, porque antes no teníamos la variable word*/
     fetch(
