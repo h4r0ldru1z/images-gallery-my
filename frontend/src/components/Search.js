@@ -13,9 +13,8 @@ const Search = ({ word, setWord, handleSubmit }) => {
               <Col xs={9}>
                 <Form.Control
                   type="text"
-                  value={
-                    word
-                  } /*connect value del input con el state de la aplicación*/
+                  value={word}
+                  /*connect value del input con el state de la aplicación*/
                   onChange={(e) =>
                     setWord(e.target.value)
                   } /*cada vez que cambie, se llamará el evento setWord*, con el valor del evento, es decir las letras o cambios, del input form*/
