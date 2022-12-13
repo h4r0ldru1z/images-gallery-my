@@ -1,10 +1,11 @@
-from flask import Flask
+from flask import Flask, request
 
 app = Flask(__name__)
 
-@app.route("/")
-def hello(): #function definition
-    return "Hello, World!" #returns text
+@app.route("/new-image")
+def new_image(): #function definition
+    word = request.args.get("query")
+    return {"word": word}
 
 #decorator is used for a view in an URL
 #executed each time client executes the URL
