@@ -9,5 +9,13 @@
         "source.fixAll.eslint": true 
     },
     "python.pythonPath": "api/.venv/Scripts/pyhton",
-    "python.formatting.provider": "black"
+    "python.formatting.provider": "black",
+    "python.linting.pycodestyleEnabled": true,
+    "python.linting.pycodestyleArgs": [
+        "--max-line--length=88"
+    ],
+    "python.linting.pylintEnabled": true,
+    "[python]": {
+        "editor.formatOnSave": true
+    }
 }
