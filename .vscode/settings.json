@@ -8,5 +8,6 @@
     "editor.codeActionsOnSave": {
         "source.fixAll.eslint": true 
     },
-    "python.pythonPath": "api/.venv/Scripts/pyhton"
+    "python.pythonPath": "api/.venv/Scripts/pyhton",
+    "python.formatting.provider": "black"
 }
