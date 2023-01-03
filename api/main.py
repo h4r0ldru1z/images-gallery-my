@@ -22,7 +22,7 @@ app.config["DEBUG"] = DEBUG
 
 
 @app.route("/new-image")  # single image and only get method
-def new_image():  # function definition
+def new_image():
     word = request.args.get("query")  # we request a parameter from query
     headers = {"Accept-Version": "v1", "Authorization": "Client-ID " + UNSPLASH_KEY}
     params = {"query": word}
@@ -37,4 +37,5 @@ def new_image():  # function definition
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5050)
-# if condition is true we run app in all ip addresses of the PC, run flask app directly in the module
+# if condition is true we run app in all ip addresses of the PC, run flask app directly
+# in the module
