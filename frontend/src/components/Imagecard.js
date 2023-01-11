@@ -20,7 +20,7 @@ const ImageCard = ({image, deleteImage, saveImage}) => {
           </Button>
         )}
       </Card.Body>
-      <Card.Footer className='text-muted' className='text-center'>
+      <Card.Footer className='text-muted text-center'>
         {authorPortfolioURL && (
           <Card.Link href={authorPortfolioURL} target='_blank'>
             {authorName}
